@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+option csharp_namespace = "SimpleCalc.SharedLib.Generated";
+
+service CalculatorService {
+	rpc Add (CalculatorRequest) returns (CalculatorReply) {}
+	rpc Subtract (CalculatorRequest) returns (CalculatorReply) {}
+	rpc Multiply (CalculatorRequest) returns (CalculatorReply) {}
+	rpc Divide (CalculatorRequest) returns (CalculatorReply) {}
+}
+
+message CalculatorRequest {
+	double n1 = 1;
+	double n2 = 2;
+}
+
+message CalculatorReply {
+	double result = 1;
+}

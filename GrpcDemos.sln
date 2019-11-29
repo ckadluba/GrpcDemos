@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21C9601B-CCB9-4841-9569-791C8E79BE3B}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc.SharedLib", "SimpleCalc\SimpleCalc.SharedLib\SimpleCalc.SharedLib.csproj", "{6A109C37-22C1-4CA0-9A53-FDFF50A61187}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleCalc", "SimpleCalc", "{639105FB-52AD-400D-871C-25D6DE83F9BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc.ServiceLib", "SimpleCalc\SimpleCalc.ServiceLib\SimpleCalc.ServiceLib.csproj", "{7414F725-009C-4F65-8EBA-54ADE9A3498E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc.ServiceHost", "SimpleCalc\SimpleCalc.ServiceHost\SimpleCalc.ServiceHost.csproj", "{A423CC8C-EA64-4D6F-B55B-9DC76CE6174E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalc.Client", "SimpleCalc\SimpleCalc.Client\SimpleCalc.Client.csproj", "{91F463B6-5377-4FE0-A6EE-076DC8222C52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A109C37-22C1-4CA0-9A53-FDFF50A61187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A109C37-22C1-4CA0-9A53-FDFF50A61187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A109C37-22C1-4CA0-9A53-FDFF50A61187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A109C37-22C1-4CA0-9A53-FDFF50A61187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7414F725-009C-4F65-8EBA-54ADE9A3498E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7414F725-009C-4F65-8EBA-54ADE9A3498E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7414F725-009C-4F65-8EBA-54ADE9A3498E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7414F725-009C-4F65-8EBA-54ADE9A3498E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A423CC8C-EA64-4D6F-B55B-9DC76CE6174E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A423CC8C-EA64-4D6F-B55B-9DC76CE6174E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A423CC8C-EA64-4D6F-B55B-9DC76CE6174E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A423CC8C-EA64-4D6F-B55B-9DC76CE6174E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F463B6-5377-4FE0-A6EE-076DC8222C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F463B6-5377-4FE0-A6EE-076DC8222C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F463B6-5377-4FE0-A6EE-076DC8222C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F463B6-5377-4FE0-A6EE-076DC8222C52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A109C37-22C1-4CA0-9A53-FDFF50A61187} = {639105FB-52AD-400D-871C-25D6DE83F9BD}
+		{7414F725-009C-4F65-8EBA-54ADE9A3498E} = {639105FB-52AD-400D-871C-25D6DE83F9BD}
+		{A423CC8C-EA64-4D6F-B55B-9DC76CE6174E} = {639105FB-52AD-400D-871C-25D6DE83F9BD}
+		{91F463B6-5377-4FE0-A6EE-076DC8222C52} = {639105FB-52AD-400D-871C-25D6DE83F9BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EE90E9C-02DF-45AE-9790-EF4743EACC52}
+	EndGlobalSection
+EndGlobal
