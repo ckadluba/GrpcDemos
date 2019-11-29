@@ -29,7 +29,6 @@
    Implement service methods.
 
 6. Create SimpleCalc.ServiceHost by Add > New Project > "gRPC Service" template  
-   Add project reference to SharedLib.  
    Add project reference to ServiceLib.  
 
 7. Create SimpleCalc.Client as console app  

@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SimpleCalc.ServiceLib\SimpleCalc.ServiceLib.csproj" />
-    <ProjectReference Include="..\SimpleCalc.SharedLib\SimpleCalc.SharedLib.csproj" />
   </ItemGroup>
 
 </Project>
