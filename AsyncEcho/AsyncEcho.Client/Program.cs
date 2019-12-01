@@ -1,37 +1,37 @@
-﻿using AsyncChat.SharedLib.Generated;
+﻿using AsyncEcho.SharedLib.Generated;
 using Grpc.Net.Client;
 using System;
 using System.Threading.Tasks;
 
-namespace AsyncChat.Client
+namespace AsyncEcho.Client
 {
     class Program
     {
         static async Task Main(string[] args)
         {
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var client = new ChatService.ChatServiceClient(channel);
+            var client = new EchoService.EchoServiceClient(channel);
 
             // Create chat rpc stream
-            using var chatStream = client.Chat();
+            using var echoStream = client.Echo();
 
             // Wire up CallbackHandler to ResponseStream - print echo from service
-            var callbackHandler = new CallbackHandler(chatStream.ResponseStream);
+            var callbackHandler = new CallbackHandler(echoStream.ResponseStream);
 
             // Run input loop
-            await InputLoop(chatStream);
+            await InputLoop(echoStream);
 
             // Run callback loop
             await callbackHandler.Task;
         }
 
-        private static async Task InputLoop(Grpc.Core.AsyncDuplexStreamingCall<ChatMessage, ChatMessage> chatStream)
+        private static async Task InputLoop(Grpc.Core.AsyncDuplexStreamingCall<EchoMessage, EchoMessage> echoStream)
         {
             Console.WriteLine("Type something");
             while (true)
             {
                 var input = Console.ReadLine();
-                await chatStream.RequestStream.WriteAsync(new ChatMessage { Message = input });
+                await echoStream.RequestStream.WriteAsync(new EchoMessage { Message = input });
             }
         }
     }

@@ -1,0 +1,10 @@
+﻿syntax = "proto3";
+option csharp_namespace = "AsyncEcho.SharedLib.Generated";
+
+service EchoService {
+	rpc Echo (stream EchoMessage) returns (stream EchoMessage) {}
+}
+
+message EchoMessage {
+	string message = 1;
+}

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace AsyncChat.ServiceHost
+namespace AsyncEcho.ServiceHost
 {
     public class Program
     {

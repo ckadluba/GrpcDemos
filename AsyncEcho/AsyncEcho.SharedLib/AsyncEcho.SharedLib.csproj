@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="AsyncChat.proto" />
+    <None Remove="AsyncEcho.proto" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="AsyncChat.proto" GrpcServices="Both" />
+    <Protobuf Include="AsyncEcho.proto" GrpcServices="Both" />
   </ItemGroup>
 
 </Project>
