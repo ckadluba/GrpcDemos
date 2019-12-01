@@ -1,0 +1,10 @@
+﻿syntax = "proto3";
+option csharp_namespace = "AsyncChat.SharedLib.Generated";
+
+service ChatService {
+	rpc Chat (stream ChatMessage) returns (stream ChatMessage) {}
+}
+
+message ChatMessage {
+	string message = 1;
+}

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimpleCalc.ServiceLib\SimpleCalc.ServiceLib.csproj" />
+    <ProjectReference Include="..\AsyncChat.ServiceLib\AsyncChat.ServiceLib.csproj" />
   </ItemGroup>
 
 </Project>

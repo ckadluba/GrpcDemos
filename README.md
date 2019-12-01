@@ -1,4 +1,28 @@
-# Create a simple gRPC Client and Server sample app in .Net Core 3.0
+# gRPC Sample Programs
+
+## SimpleCalc
+
+A simple calculator service with a client using synchronous gRPC calls with ASP .Net Core 3.0.  
+
+Execute SimpleCalc.ServiceHost and SimpleCalc.Client.
+
+## AsyncEcho
+
+A service that just echos the input from the client using an asynchronous gRPC call.
+
+Execute AsyncEcho.ServiceHost and AsyncEcho.Client.
+
+## AsyncChat (to do)
+
+A small chat server with a console client using asynchronous gRPC calls.
+
+Execute AsyncChat.ServiceHost and two or more instances of AsyncChat.Client.
+
+# Tutorial
+
+## Writing the code
+
+This example is based on the SimpleCalc sample app.
 
 1. Maybe you need to install dotnet-grpc  
    ```
@@ -33,4 +57,17 @@
 
 7. Create SimpleCalc.Client as console app  
    Add reference to SharedLib.  
-   Create instance of CalculatorServiceClient and use with GrpcChannel.ForAddress()  
+   Install NuGet package Grpc.Core if using that instead of grpc-dotnet
+   Create instance of CalculatorServiceClient and use with GrpcChannel.ForAddress()
+
+## Troubleshooting and configuration
+
+TODO.
+* Transfer modes (buffered, streamed, uni- or bidirectional)
+* Service lifetime
+* Callbacks
+* Logging
+* Testing tools (like Postman)
+* Security
+* Connection settings
+* etc.

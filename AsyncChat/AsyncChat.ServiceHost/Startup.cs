@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AsyncChat.ServiceLib;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace SimpleCalc.ServiceHost
+namespace AsyncChat.ServiceHost
 {
     public class Startup
     {
@@ -27,7 +32,7 @@ namespace SimpleCalc.ServiceHost
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<ServiceLib.CalculatorService>();
+                endpoints.MapGrpcService<ChatService>();
 
                 endpoints.MapGet("/", async context =>
                 {
