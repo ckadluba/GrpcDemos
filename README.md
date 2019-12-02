@@ -20,7 +20,7 @@ Execute AsyncChat.ServiceHost and two or more instances of AsyncChat.Client.
 
 # Tutorial
 
-## Writing the code
+## Writing the Code
 
 This example is based on the SimpleCalc sample app.
 
@@ -61,14 +61,34 @@ This example is based on the SimpleCalc sample app.
    Install NuGet package Grpc.Core if using that instead of grpc-dotnet
    Create instance of CalculatorServiceClient and use with GrpcChannel.ForAddress()
 
-## Troubleshooting and configuration
+## Troubleshooting and Configuration (to do)
 
-TODO.
 * Transfer modes (buffered, streamed, uni- or bidirectional)
-* Service lifetime
-* Callbacks
-* Logging
-* Testing tools (like Postman)
+* Service lifetime  
+  ...
+* Logging in grpc-net based implementations
+  ```csharp
+  Environment.SetEnvironmentVariable("GRPC_TRACE", "all");
+  Environment.SetEnvironmentVariable("GRPC_VERBOSITY", "debug");
+  Grpc.Core.GrpcEnvironment.SetLogger(new Grpc.Core.Logging.ConsoleLogger());
+  ```
+  https://stackoverflow.com/questions/51440399/c-sharp-grpc-client-name-resolution-failure
+* Testing: BloomRPC - a Postman like test tool for gRPC  
+  https://github.com/uw-labs/bloomrpc
+* Wireshark analysis (tcp.dstport == 5001)
 * Security
 * Connection settings
 * etc.
+
+## References and Documentation
+
+* Official gRPC site and GitHub  
+  https://grpc.io/
+* gRPC on GitHub  
+  https://github.com/grpc/grpc
+* gRPC wire format
+  https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
+* A curated list of useful gRPC resources
+  https://github.com/grpc-ecosystem/awesome-grpc
+* Grpc.Net client "stream removed" problem  
+  https://stackoverflow.com/questions/55747287/unable-to-make-a-connection-between-trivial-c-sharp-grpc-client-and-server?noredirect=1
