@@ -53,7 +53,7 @@ This example is based on the SimpleCalc sample app.
    Implement service methods.
 
 6. Create SimpleCalc.ServiceHost by Add > New Project > "gRPC Service" template  
-   Delete unused generated directories Services and Proto
+   Delete unused generated directories Services and Proto  
    Add project reference to ServiceLib.  
 
 7. Create SimpleCalc.Client as console app  
