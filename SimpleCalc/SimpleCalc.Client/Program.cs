@@ -9,11 +9,11 @@ namespace SimpleCalc.Client
     {
         static async Task Main(string[] args)
         {
-            // Using Google's grpc-dotnet
+            // Using Microsoft's Grpc
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new CalculatorService.CalculatorServiceClient(channel);
 
-            // Using Microsoft's Grpc.Core - did not work, maybe secure/insecure mismatch btw. client and server
+            // Using Google's grpc-dotnet - did not work, maybe secure/insecure mismatch btw. client and server
             // Does not work - Grpc.Core.RpcException "Stream removed"
             //var channel = new Channel("localhost:5001", ChannelCredentials.Insecure);
             //var client = new CalculatorService.CalculatorServiceClient(channel);
