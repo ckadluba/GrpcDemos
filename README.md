@@ -1,5 +1,10 @@
 # gRPC Sample Programs
 
+## MinimalHello
+
+The simplest possible client and server gRPC sample app consisting of only two projects.  
+For demo purposes, it uses insecure transport over HTTP/2 without TLS. Demonstrates also Microsoft Grpc.Net and Google Grpc.Core logging.
+
 ## SimpleCalc
 
 A simple calculator service with a client using synchronous gRPC calls with ASP .Net Core 3.0.  
@@ -63,22 +68,41 @@ This example is based on the SimpleCalc sample app.
 
 ## Troubleshooting and Configuration (to do)
 
-* Transfer modes (buffered, streamed, uni- or bidirectional)
-* Service lifetime  
-  ...
-* Logging in grpc-net based implementations
+### Transfer modes
+
+Buffered, streamed, uni- or bidirectional, ...
+
+### Service lifetime
+
+...
+
+### Logging
+
+* In Google gRPC based implementations
   ```csharp
   Environment.SetEnvironmentVariable("GRPC_TRACE", "all");
   Environment.SetEnvironmentVariable("GRPC_VERBOSITY", "debug");
   Grpc.Core.GrpcEnvironment.SetLogger(new Grpc.Core.Logging.ConsoleLogger());
   ```
   https://stackoverflow.com/questions/51440399/c-sharp-grpc-client-name-resolution-failure
-* Testing: BloomRPC - a Postman like test tool for gRPC  
+* In Microsoft Grpc.Net based implementations
+  https://docs.microsoft.com/en-us/aspnet/core/grpc/diagnostics?view=aspnetcore-3.1
+
+### Testing and Troubleshooting Tools
+
+* BloomRPC - a Postman like test tool for gRPC  
   https://github.com/uw-labs/bloomrpc
-* Wireshark analysis (tcp.dstport == 5001)
-* Security
-* Connection settings
-* etc.
+* Wireshark analysis
+  Only suitable for insecure HTTP/2 during development (tcp.dstport == 5001)
+
+### Security
+...
+
+### Connection settings
+
+...
+
+### etc.
 
 ## References and Documentation
 
