@@ -72,7 +72,18 @@ Buffered, streamed, uni- or bidirectional, ...
 
 ## Service lifetime
 
-When is the service class created/reused?
+* When is the service class created/reused?
+* In WCF controlled by ServiceBehaviorAttribute on service contract (e.g. InstanceContextMode.PerSession)
+* In Google Grpc.Core based services a single instance all requests.
+* In Microsoft Grpc.AspNetCore based services a new instance for each request
+  * Can controlled in ConfigureServices()
+    ```csharp
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddGrpc();
+        services.AddSingleton(new GreeterService());
+    }
+    ```
 
 ## Security
 
@@ -176,9 +187,13 @@ When is the service class created/reused?
   https://grpc.io/
 * gRPC on GitHub  
   https://github.com/grpc/grpc
-* gRPC wire format  
-  https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
 * A curated list of useful gRPC resources  
   https://github.com/grpc-ecosystem/awesome-grpc
+* Codemag article - gRPC as a Replacement for WCF  
+  https://www.codemag.com/article/1911102?utm_source=msft-focus-tw&amp;utm_medium=social-promoted&amp;utm_campaign=sm-articles
+* Migrating gRPC services from C-core to ASP.NET Core  
+  https://docs.microsoft.com/en-us/aspnet/core/grpc/migration?view=aspnetcore-3.1
 * Grpc.Net client "stream removed" problem  
   https://stackoverflow.com/questions/55747287/unable-to-make-a-connection-between-trivial-c-sharp-grpc-client-and-server?noredirect=1
+* gRPC wire format  
+  https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
