@@ -2,14 +2,22 @@
 
 ## MinimalHello
 
-The simplest possible client and server gRPC sample app consisting of only two projects.  
-For demo purposes, it uses insecure transport over HTTP/2 without TLS. Demonstrates also Microsoft Grpc.Net and Google Grpc.Core logging.
+The simplest possible client and server gRPC sample app consisting of only two projects. It demonstrates also Microsoft Grpc.Net client- and server side logging.
+
+## MinimalGoogleGrpc
+
+Like MinimalHello but client and server based on Google's Grpc.Core library.
+For demo purposes, it uses insecure transport over HTTP/2 without TLS and demonstrates also Google Grpc.Core client- and server side logging.
 
 ## SimpleCalc
 
 A simple calculator service with a client using synchronous gRPC calls with ASP .Net Core 3.0.  
 
 Execute SimpleCalc.ServiceHost and SimpleCalc.Client.
+
+## LifeTime (to do)
+
+Two services called from one client. One is configured to create the service class for each request (default) and the other has one single service class instance for all requests.
 
 ## AsyncEcho
 
@@ -40,9 +48,13 @@ This example is based on the SimpleCalc sample app.
    In SharedLib create SimpleCalc.proto  
 
 3. Generate client and server stubs  
-   In SharedLib: Add > Service Reference > gRPC > File: .proto file, Type: Client and Server
+   In SharedLib: Add > Service Reference > gRPC > File: .proto file, Type: Client and Server  
+   Can also be done with CLI:
+   ```powershell
+   dotnet grpc add-file [options] <files>...
+   ```
 
-4. Edit Protobuf element to make generated source visible in Solution Explorer
+4. Edit Protobuf element to make generated source visible in Solution Explorer (optional)
    ```xml
    <Protobuf Include="calculator.proto"
              OutputDir="%(RelativePath)"
@@ -64,13 +76,48 @@ This example is based on the SimpleCalc sample app.
    Install NuGet package Grpc.Core if using that instead of grpc-dotnet
    Create instance of CalculatorServiceClient and use with GrpcChannel.ForAddress()
 
-# ASP.Net Core Integration
+# gRPC and WCF
 
-## Transfer modes
+## Existing Libraries
 
-Buffered, streamed, uni- or bidirectional, ...
+* WCF is a Microsoft .Net technology
+  * will not come to .NET Core/.NET 5
+* Original gRPC from Google
+  * Grpc.Core etc.
+  * Managed wrapper which calls native lib written in C
+* Microsoft gRPC
+  * 100% managed code
+  * Grpc.Net, Grpc.AspNetCore, etc.
 
-## Service lifetime
+## Binding, Contracts and Reflection
+
+* WCF Endpoint
+  * address
+  * binding (protocol, security, etc. also custom bindings possible)
+  * contract (interface with ServiceContract attribute)
+    * Implemented by class on server
+    * Implemented by generated class on client (Add Service Reference ...)
+  * Metadata Exchange Protocol (MEX)
+* gRPC
+  * transport over HTTP/2 (for all .Net implementations)
+  * channel - single virtual connection (multiplexing, pooling, load balancing, one or more physical connections)
+  * stubs (client and server code that accesses channel, generated from IDL using protoc compiler)
+    * Server stub is base class to derive from (Add Service Reference - Server)
+    * Client stub (Add Service Reference - Client)
+  * IDL interface definition language is protobuffers (.proto)
+  * Service Reflection Protocol
+
+## Transfer Modes
+
+
+| WCF          | gRPC          | Comment     | Protobuffers Sample        |
+|--------------|---------------|-------------|----------------------------|
+| Buffered     | Unary         | Client sends single request, server answers with respose | rpc Hello (Request) returns (Reply) |
+| Return stream with binding that supports streamed transfer mode | Server streaming| Service sends stream to the client | rpc DownloadFile (Request) returns (stream Reply) |
+| Possible?    | Client streaming | Client sends stream to the server | rpc UploadFile (stream Request) returns (Response) | 
+| 🤷‍😂          | Bidirectional streaming | Client and server using streams | rpc JoinVideoConference (stream Request) returns (stream Response) |
+
+## Service Lifetime
 
 * When is the service class created/reused?
 * In WCF controlled by ServiceBehaviorAttribute on service contract (e.g. InstanceContextMode.PerSession)
@@ -87,13 +134,16 @@ Buffered, streamed, uni- or bidirectional, ...
 
 ## Security
 
-...
+* WCF supports HTTPS/TLS transport
+* gRPC
+  * All implementations support HTTP/2 with TLS
+    * not required
+    * still problems in practice with some tools and implementations (see Tools section below)
+  * gRPC also supports Google token based authentication  
+    https://grpc.io/docs/guides/auth/
+  * Extensible for futher authentication mechanisms
 
-## Connection settings
-
-...
-
-## ServiceContext
+## ServiceContext Class
 
 ...
 
@@ -183,16 +233,16 @@ Buffered, streamed, uni- or bidirectional, ...
 
 # References and Documentation
 
-* Official gRPC site and GitHub  
-  https://grpc.io/
-* gRPC on GitHub  
-  https://github.com/grpc/grpc
+* Official gRPC site and GitHub repo  
+  https://grpc.io/  
+  https://github.com/grpc/grpc  
 * A curated list of useful gRPC resources  
   https://github.com/grpc-ecosystem/awesome-grpc
-* Codemag article - gRPC as a Replacement for WCF  
-  https://www.codemag.com/article/1911102?utm_source=msft-focus-tw&amp;utm_medium=social-promoted&amp;utm_campaign=sm-articles
-* Migrating gRPC services from C-core to ASP.NET Core  
-  https://docs.microsoft.com/en-us/aspnet/core/grpc/migration?view=aspnetcore-3.1
+* Code Magazine - gRPC as a Replacement for WCF  
+  https://www.codemag.com/article/1911102
+* Microsoft ASP.NET Core gRPC docs  
+  https://docs.microsoft.com/en-us/aspnet/core/grpc/migration?view=aspnetcore-3.1  
+  https://docs.microsoft.com/en-us/aspnet/core/grpc/configuration?view=aspnetcore-3.1
 * Grpc.Net client "stream removed" problem  
   https://stackoverflow.com/questions/55747287/unable-to-make-a-connection-between-trivial-c-sharp-grpc-client-and-server?noredirect=1
 * gRPC wire format  

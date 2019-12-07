@@ -30,9 +30,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncEcho.Client", "AsyncEc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MinimalHello", "MinimalHello", "{D43CD7B6-1D32-4D22-ADD7-5AB64DB8E896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalHello.Service", "MinimalHello\MinimalHello.Service\MinimalHello.Service.csproj", "{8A25D2AF-F233-46E2-86C0-4432A237ABB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalHello.Service", "MinimalHello\MinimalHello.Service\MinimalHello.Service.csproj", "{8A25D2AF-F233-46E2-86C0-4432A237ABB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalHello.Client", "MinimalHello\MinimalHello.Client\MinimalHello.Client.csproj", "{D464FDEA-3671-4600-B45D-03D611BD1A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalHello.Client", "MinimalHello\MinimalHello.Client\MinimalHello.Client.csproj", "{D464FDEA-3671-4600-B45D-03D611BD1A41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MinimalGoogleGrpc", "MinimalGoogleGrpc", "{A02F8D04-28EA-48E8-9BB7-BF968E12751D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalGoogleGrpc.Service", "MinimalGoogleGrpc\MinimalGoogleGrpc.Service\MinimalGoogleGrpc.Service.csproj", "{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalGoogleGrpc.Client", "MinimalGoogleGrpc\MinimalGoogleGrpc.Client\MinimalGoogleGrpc.Client.csproj", "{FA65292C-47E2-46AC-931C-24E76B9662C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +86,14 @@ Global
 		{D464FDEA-3671-4600-B45D-03D611BD1A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D464FDEA-3671-4600-B45D-03D611BD1A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D464FDEA-3671-4600-B45D-03D611BD1A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +109,8 @@ Global
 		{E8BB1EC3-DEAA-48DB-8B5E-9B051EFC915F} = {61BB454E-9E57-402E-A12F-FDA4F3E04411}
 		{8A25D2AF-F233-46E2-86C0-4432A237ABB7} = {D43CD7B6-1D32-4D22-ADD7-5AB64DB8E896}
 		{D464FDEA-3671-4600-B45D-03D611BD1A41} = {D43CD7B6-1D32-4D22-ADD7-5AB64DB8E896}
+		{0C5D47BF-F625-4270-A34F-9DD3330E0AE2} = {A02F8D04-28EA-48E8-9BB7-BF968E12751D}
+		{FA65292C-47E2-46AC-931C-24E76B9662C2} = {A02F8D04-28EA-48E8-9BB7-BF968E12751D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EE90E9C-02DF-45AE-9790-EF4743EACC52}

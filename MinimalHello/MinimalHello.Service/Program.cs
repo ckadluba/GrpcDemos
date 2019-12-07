@@ -25,7 +25,6 @@ namespace MinimalHello.Service
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     //ConfigureInsecureHttp2Listener(webBuilder);
-
                     webBuilder.UseStartup<Startup>();
                 });
 

@@ -13,11 +13,6 @@ namespace SimpleCalc.Client
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new CalculatorService.CalculatorServiceClient(channel);
 
-            // Using Google's grpc-dotnet - did not work, maybe secure/insecure mismatch btw. client and server
-            // Does not work - Grpc.Core.RpcException "Stream removed"
-            //var channel = new Channel("localhost:5001", ChannelCredentials.Insecure);
-            //var client = new CalculatorService.CalculatorServiceClient(channel);
-
             const int n1 = 34;
             const int n2 = 76;
             var sum = client.Add(new CalculatorRequest { N1 = n1, N2 = n2 });
