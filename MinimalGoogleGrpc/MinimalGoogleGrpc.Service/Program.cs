@@ -6,10 +6,10 @@ namespace MinimalGoogleGrpc.Service
 {
     public class Program
     {
-        const string Host = "localhost";
-        const int Port = 5001;
+        private const string Host = "localhost";
+        private const int Port = 5001;
 
-        static async Task Main(string[] args)
+        public static async Task Main()
         {
             // Use Google Grpc.Core
             EnableGoogleGrpcLogging();

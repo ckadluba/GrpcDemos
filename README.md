@@ -15,9 +15,11 @@ A simple calculator service with a client using synchronous gRPC calls with ASP 
 
 Execute SimpleCalc.ServiceHost and SimpleCalc.Client.
 
-## LifeTime (to do)
+## LifeTime
 
-Two services called from one client. One is configured to create the service class for each request (default) and the other has one single service class instance for all requests.
+Two services called from one client. One is configured to create the service class for each request (default) and the other has one single service class instance for all requests.  
+
+Execute LifeTime.ServiceHostPerCall, LifeTime.ServiceHostSingleton, LifeTime.ServiceHostGoogleGrpc and LifeTime.Client.
 
 ## AsyncEcho
 
@@ -73,7 +75,7 @@ This example is based on the SimpleCalc sample app.
 
 7. Create SimpleCalc.Client as console app  
    Add reference to SharedLib.  
-   Install NuGet package Grpc.Core if using that instead of grpc-dotnet
+   Install NuGet package Grpc.Core for Google Grpc library if using that instead of Microsoft Grpc
    Create instance of CalculatorServiceClient and use with GrpcChannel.ForAddress()
 
 # gRPC and WCF

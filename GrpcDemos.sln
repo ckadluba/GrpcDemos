@@ -36,9 +36,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalHello.Client", "Mini
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MinimalGoogleGrpc", "MinimalGoogleGrpc", "{A02F8D04-28EA-48E8-9BB7-BF968E12751D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalGoogleGrpc.Service", "MinimalGoogleGrpc\MinimalGoogleGrpc.Service\MinimalGoogleGrpc.Service.csproj", "{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalGoogleGrpc.Service", "MinimalGoogleGrpc\MinimalGoogleGrpc.Service\MinimalGoogleGrpc.Service.csproj", "{0C5D47BF-F625-4270-A34F-9DD3330E0AE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalGoogleGrpc.Client", "MinimalGoogleGrpc\MinimalGoogleGrpc.Client\MinimalGoogleGrpc.Client.csproj", "{FA65292C-47E2-46AC-931C-24E76B9662C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalGoogleGrpc.Client", "MinimalGoogleGrpc\MinimalGoogleGrpc.Client\MinimalGoogleGrpc.Client.csproj", "{FA65292C-47E2-46AC-931C-24E76B9662C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LifeTime", "LifeTime", "{D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.SharedLib", "LifeTime\LifeTime.SharedLib\LifeTime.SharedLib.csproj", "{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceLib", "LifeTime\LifeTime.ServiceLib\LifeTime.ServiceLib.csproj", "{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceHostPerCall", "LifeTime\LifeTime.ServiceHostPerCall\LifeTime.ServiceHostPerCall.csproj", "{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.Client", "LifeTime\LifeTime.Client\LifeTime.Client.csproj", "{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceHostSingleton", "LifeTime\LifeTime.ServiceHostSingleton\LifeTime.ServiceHostSingleton.csproj", "{68D60B48-1421-42CC-B0F2-A44F5671E04F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceHostGoogleGrpc", "LifeTime\LifeTime.ServiceHostGoogleGrpc\LifeTime.ServiceHostGoogleGrpc.csproj", "{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +108,30 @@ Global
 		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA65292C-47E2-46AC-931C-24E76B9662C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D60B48-1421-42CC-B0F2-A44F5671E04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D60B48-1421-42CC-B0F2-A44F5671E04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D60B48-1421-42CC-B0F2-A44F5671E04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D60B48-1421-42CC-B0F2-A44F5671E04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +149,12 @@ Global
 		{D464FDEA-3671-4600-B45D-03D611BD1A41} = {D43CD7B6-1D32-4D22-ADD7-5AB64DB8E896}
 		{0C5D47BF-F625-4270-A34F-9DD3330E0AE2} = {A02F8D04-28EA-48E8-9BB7-BF968E12751D}
 		{FA65292C-47E2-46AC-931C-24E76B9662C2} = {A02F8D04-28EA-48E8-9BB7-BF968E12751D}
+		{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
+		{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
+		{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
+		{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
+		{68D60B48-1421-42CC-B0F2-A44F5671E04F} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
+		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EE90E9C-02DF-45AE-9790-EF4743EACC52}

@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "LifeTime.SharedLib";
+
+service LifeTimeService {
+    rpc GetInstance (GetInstanceRequest) returns (GetInstanceReply);
+}
+
+message GetInstanceRequest {
+}
+
+message GetInstanceReply {
+    string message = 1;
+}
