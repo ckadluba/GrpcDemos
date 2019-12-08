@@ -25,6 +25,10 @@ Execute LifeTime.ServiceHostPerCall, LifeTime.ServiceHostSingleton, LifeTime.Ser
 
 Demonstrates gRPC Server Reflection.
 
+## MetaData (to do)
+
+Demonstrates a gRPC call containing metadata fields.
+
 ## AsyncEcho
 
 A service that just echos the input from the client using an asynchronous gRPC call.
