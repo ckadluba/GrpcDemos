@@ -21,6 +21,10 @@ Two services called from one client. One is configured to create the service cla
 
 Execute LifeTime.ServiceHostPerCall, LifeTime.ServiceHostSingleton, LifeTime.ServiceHostGoogleGrpc and LifeTime.Client.
 
+## ServerReflection (to do)
+
+Demonstrates gRPC Server Reflection.
+
 ## AsyncEcho
 
 A service that just echos the input from the client using an asynchronous gRPC call.
@@ -91,7 +95,7 @@ This example is based on the SimpleCalc sample app.
   * 100% managed code
   * Grpc.Net, Grpc.AspNetCore, etc.
 
-## Binding, Contracts and Reflection
+## Binding and Contracts
 
 * WCF Endpoint
   * address
@@ -99,7 +103,6 @@ This example is based on the SimpleCalc sample app.
   * contract (interface with ServiceContract attribute)
     * Implemented by class on server
     * Implemented by generated class on client (Add Service Reference ...)
-  * Metadata Exchange Protocol (MEX)
 * gRPC
   * transport over HTTP/2 (for all .Net implementations)
   * channel - single virtual connection (multiplexing, pooling, load balancing, one or more physical connections)
@@ -107,7 +110,6 @@ This example is based on the SimpleCalc sample app.
     * Server stub is base class to derive from (Add Service Reference - Server)
     * Client stub (Add Service Reference - Client)
   * IDL interface definition language is protobuffers (.proto)
-  * Service Reflection Protocol
 
 ## Transfer Modes
 
@@ -148,6 +150,15 @@ This example is based on the SimpleCalc sample app.
 ## ServiceContext Class
 
 ...
+
+## gRPC Server Reflection
+
+Client can query service interface.
+
+* WCF - Metadata Exchange Protocol (MEX)
+* gRPC - Server Reflection
+
+... to do: code
 
 # Logging
 
