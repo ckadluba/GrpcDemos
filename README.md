@@ -21,9 +21,11 @@ Two services called from one client. One is configured to create the service cla
 
 Execute LifeTime.ServiceHostPerCall, LifeTime.ServiceHostSingleton, LifeTime.ServiceHostGoogleGrpc and LifeTime.Client.
 
-## ServerReflection (to do)
+## ServerReflection
 
-Demonstrates gRPC Server Reflection.
+Demonstrates gRPC Server Reflection. Sample contains only service project.  
+
+Call server reflection via gRPCurl in call-service.ps1.
 
 ## Metadata (to do)
 
@@ -165,8 +167,24 @@ Client can query service interface.
 
 * WCF - Metadata Exchange Protocol (MEX)
 * gRPC - Server Reflection
-
-... to do: code
+  * NuGet Grpc.AspNetCore.Server.Reflection
+  * Server code  
+    Add Grpc Reflection  
+    ```csharp
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddGrpc();
+        services.AddGrpcReflection();
+    }
+    ```  
+    Map Grpc Reflection service  
+    ```csharp
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapGrpcService<GreeterService>();
+        endpoints.MapGrpcReflectionService();
+    });
+    ```
 
 ## Timeouts/Deadlines
 
@@ -255,6 +273,7 @@ Client can query service interface.
   * Only suitable for general connectivity problems or with insecure HTTP/2 during development
   * TLS also possible but requires cumbersome server cert + private key setup in Wireshark
   * Trace packets on loopback interface with display filter "tcp.port == 5001".
+  * Configure HTTP/2 dissection if not port 80: Edit > Settings > Protocols > http2 > Port = 5001
 * gRPC-Web - swagger like browser support for gRPC services
   * https://grpc.io/docs/tutorials/basic/web/
   * Requires additional code generation, introduces a proxy
@@ -263,7 +282,9 @@ Client can query service interface.
 
 * Official gRPC site and GitHub repo  
   https://grpc.io/  
-  https://github.com/grpc/grpc  
+  https://github.com/grpc/grpc
+* gRPC ASP.NET Core  
+  https://github.com/grpc/grpc-dotnet
 * A curated list of useful gRPC resources  
   https://github.com/grpc-ecosystem/awesome-grpc
 * Code Magazine - gRPC as a Replacement for WCF  

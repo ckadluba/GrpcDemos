@@ -42,17 +42,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinimalGoogleGrpc.Client", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LifeTime", "LifeTime", "{D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.SharedLib", "LifeTime\LifeTime.SharedLib\LifeTime.SharedLib.csproj", "{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime.SharedLib", "LifeTime\LifeTime.SharedLib\LifeTime.SharedLib.csproj", "{3B6794D1-EAE3-41FD-878E-DE7A5BBD82D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceLib", "LifeTime\LifeTime.ServiceLib\LifeTime.ServiceLib.csproj", "{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime.ServiceLib", "LifeTime\LifeTime.ServiceLib\LifeTime.ServiceLib.csproj", "{6744CC0E-E79B-44A1-969E-4C7D1EAE1F85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceHostPerCall", "LifeTime\LifeTime.ServiceHostPerCall\LifeTime.ServiceHostPerCall.csproj", "{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime.ServiceHostPerCall", "LifeTime\LifeTime.ServiceHostPerCall\LifeTime.ServiceHostPerCall.csproj", "{E37BA68A-6CDD-4DB4-8E1A-C9660C3F6CD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.Client", "LifeTime\LifeTime.Client\LifeTime.Client.csproj", "{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime.Client", "LifeTime\LifeTime.Client\LifeTime.Client.csproj", "{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceHostSingleton", "LifeTime\LifeTime.ServiceHostSingleton\LifeTime.ServiceHostSingleton.csproj", "{68D60B48-1421-42CC-B0F2-A44F5671E04F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime.ServiceHostSingleton", "LifeTime\LifeTime.ServiceHostSingleton\LifeTime.ServiceHostSingleton.csproj", "{68D60B48-1421-42CC-B0F2-A44F5671E04F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeTime.ServiceHostGoogleGrpc", "LifeTime\LifeTime.ServiceHostGoogleGrpc\LifeTime.ServiceHostGoogleGrpc.csproj", "{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LifeTime.ServiceHostGoogleGrpc", "LifeTime\LifeTime.ServiceHostGoogleGrpc\LifeTime.ServiceHostGoogleGrpc.csproj", "{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServerReflection", "ServerReflection", "{C0540901-49F9-4609-B716-AE0CE0F1317F}"
+	ProjectSection(SolutionItems) = preProject
+		ServerReflection\call-service.ps1 = ServerReflection\call-service.ps1
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerReflection.Service", "ServerReflection\ServerReflection.Service\ServerReflection.Service.csproj", "{BC189C93-C2B1-44F8-9996-43A143AD2EE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,6 +139,10 @@ Global
 		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC189C93-C2B1-44F8-9996-43A143AD2EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC189C93-C2B1-44F8-9996-43A143AD2EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC189C93-C2B1-44F8-9996-43A143AD2EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC189C93-C2B1-44F8-9996-43A143AD2EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,6 +166,7 @@ Global
 		{74F8BDBD-AD8E-44A8-9DF8-CC5B44D83B12} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
 		{68D60B48-1421-42CC-B0F2-A44F5671E04F} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
 		{25867E94-D6DC-4F05-8E66-FDAA4EE64E41} = {D7A3CD19-66FD-4CCB-B0FD-FB76DC10B3E9}
+		{BC189C93-C2B1-44F8-9996-43A143AD2EE2} = {C0540901-49F9-4609-B716-AE0CE0F1317F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EE90E9C-02DF-45AE-9790-EF4743EACC52}
