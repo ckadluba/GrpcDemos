@@ -275,5 +275,5 @@ Client can query service interface.
   https://stackoverflow.com/questions/55747287/unable-to-make-a-connection-between-trivial-c-sharp-grpc-client-and-server?noredirect=1
 * gRPC wire format  
   https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
-* ASP.NET Core gRPC not yet supported on IIS/Azure App Service but possible as generic hosted service with Kestrel on AKS.
+* ASP.NET Core gRPC not yet supported on IIS/Azure App Service but possible as generic hosted service with Kestrel on AKS.  
   https://github.com/aspnet/AspNetCore/issues/9020
