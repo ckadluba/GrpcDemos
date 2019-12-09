@@ -137,7 +137,7 @@ This example is based on the SimpleCalc sample app.
 * In WCF controlled by ServiceBehaviorAttribute on service contract (e.g. InstanceContextMode.PerSession)
 * In Google Grpc.Core based services a single instance all requests.
 * In Microsoft Grpc.AspNetCore based services a new instance for each request
-  * Can controlled in ConfigureServices()
+  * Can be controlled by directly registering the service with AddSingleton()
     ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
