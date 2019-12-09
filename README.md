@@ -25,9 +25,13 @@ Execute LifeTime.ServiceHostPerCall, LifeTime.ServiceHostSingleton, LifeTime.Ser
 
 Demonstrates gRPC Server Reflection.
 
-## MetaData (to do)
+## Metadata (to do)
 
 Demonstrates a gRPC call containing metadata fields.
+
+## Timeout (to do)
+
+Demonstrates terminating a long lasting gRPC call using timeout/deadline.
 
 ## AsyncEcho
 
@@ -110,10 +114,10 @@ This example is based on the SimpleCalc sample app.
 * gRPC
   * transport over HTTP/2 (for all .Net implementations)
   * channel - single virtual connection (multiplexing, pooling, load balancing, one or more physical connections)
-  * stubs (client and server code that accesses channel, generated from IDL using protoc compiler)
+  * IDL interface definition language is protobuffers (.proto)
+  * Generated code stubs (client and server code that accesses channel, generated from IDL using protoc compiler)
     * Server stub is base class to derive from (Add Service Reference - Server)
     * Client stub (Add Service Reference - Client)
-  * IDL interface definition language is protobuffers (.proto)
 
 ## Transfer Modes
 
@@ -121,8 +125,8 @@ This example is based on the SimpleCalc sample app.
 | WCF          | gRPC          | Comment     | Protobuffers Sample        |
 |--------------|---------------|-------------|----------------------------|
 | Buffered     | Unary         | Client sends single request, server answers with respose | rpc Hello (Request) returns (Reply) |
-| Return stream with binding that supports streamed transfer mode | Server streaming| Service sends stream to the client | rpc DownloadFile (Request) returns (stream Reply) |
-| Possible?    | Client streaming | Client sends stream to the server | rpc UploadFile (stream Request) returns (Response) | 
+| Return stream to client with binding that supports streamed transfer mode | Server streaming| Service sends stream to the client | rpc DownloadFile (Request) returns (stream Reply) |
+| Pass stream to server with binding that supports streamed transfer mode | Client streaming | Client sends stream to the server | rpc UploadFile (stream Request) returns (Response) | 
 | 🤷‍😂          | Bidirectional streaming | Client and server using streams | rpc JoinVideoConference (stream Request) returns (stream Response) |
 
 ## Service Lifetime
@@ -163,6 +167,10 @@ Client can query service interface.
 * gRPC - Server Reflection
 
 ... to do: code
+
+## Timeouts/Deadlines
+
+...
 
 # Logging
 
@@ -247,6 +255,9 @@ Client can query service interface.
   * Only suitable for general connectivity problems or with insecure HTTP/2 during development
   * TLS also possible but requires cumbersome server cert + private key setup in Wireshark
   * Trace packets on loopback interface with display filter "tcp.port == 5001".
+* gRPC-Web - swagger like browser support for gRPC services
+  * https://grpc.io/docs/tutorials/basic/web/
+  * Requires additional code generation, introduces a proxy
 
 # References and Documentation
 
@@ -264,3 +275,5 @@ Client can query service interface.
   https://stackoverflow.com/questions/55747287/unable-to-make-a-connection-between-trivial-c-sharp-grpc-client-and-server?noredirect=1
 * gRPC wire format  
   https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
+* ASP.NET Core gRPC not yet supported on IIS/Azure App Service but possible as generic hosted service with Kestrel on AKS.
+  https://github.com/aspnet/AspNetCore/issues/9020
