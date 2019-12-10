@@ -254,7 +254,7 @@ Client can query service interface.
   * Command line tool. Many features but not easy to use.
   * Example: call MinimalHello.Service with unencrypted HTTP/2 
     ```powershell
-    .\grpcurl.exe -v -plaintext -d '{ \"name\": \"Johnny\"}' -import-path "C:\source\github\GrpcDemos\MinimalHello\MinimalHello.Service\Protos\" -proto Greeter.proto localhost:5001 Greet.Greeter/GetGreeting
+    grpcurl -v -plaintext -d '{ \"name\": \"Johnny\"}' -import-path "C:\source\github\GrpcDemos\MinimalHello\MinimalHello.Service\Protos\" -proto Greeter.proto localhost:5001 Greet.Greeter/GetGreeting
     ```   
     ![Grpcurl](grpcurl.png)
   * Did not work with TLS 😢

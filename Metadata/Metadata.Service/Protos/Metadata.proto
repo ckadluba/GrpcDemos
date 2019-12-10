@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Metadata.Service";
+
+service MetadataService {
+    rpc ExchangeData (ExchangeDataRequest) returns (ExchangeDataRequest);
+}
+
+message ExchangeDataRequest {
+}
+
+message ExchangeDataReply {
+}
