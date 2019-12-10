@@ -1,5 +1,7 @@
 ﻿# gRPC Sample Programs
 
+Here are some small sample apps written in C# to explore the current state and features of the gRPC in stack for ASP.NET Core.
+
 ## MinimalHello
 
 The simplest possible client and server gRPC sample app consisting of only two projects. It demonstrates also Microsoft Grpc.Net client- and server side logging.
@@ -286,6 +288,10 @@ Client can query service interface.
 * gRPC-Web - swagger like browser support for gRPC services
   * https://grpc.io/docs/tutorials/basic/web/
   * Requires additional code generation, introduces a proxy
+* Traffic Parrot
+  * https://trafficparrot.com/tutorials/mocking-and-simulating-grpc.html
+  * Wire mocking gRPC services
+  * Commercial license, 14-day trial.
 
 # References and Documentation
 
