@@ -27,9 +27,9 @@ Demonstrates gRPC Server Reflection. Sample contains only service project.
 
 Call server reflection via gRPCurl in call-service.ps1.
 
-## Metadata (to do)
+## Metadata
 
-Demonstrates a gRPC call containing metadata fields.
+Demonstrates sending call metadata in request and response between client and server.
 
 ## Timeout (to do)
 
@@ -157,9 +157,18 @@ This example is based on the SimpleCalc sample app.
     https://grpc.io/docs/guides/auth/
   * Extensible for futher authentication mechanisms
 
-## ServiceContext Class
+## ServerCallContext
 
-...
+* gRPC passes ServerCallContext instance to every service method
+  * Call specific technical information and functions
+  * Exchange metadata (both directions)
+  * Deadline/timeout for call
+  * Authentication info
+  * Called host, method and calling client info
+  * Set response status
+  * Set Stream options
+  * etc.
+* WCF service methods can use OperationContext.Current
 
 ## gRPC Server Reflection
 

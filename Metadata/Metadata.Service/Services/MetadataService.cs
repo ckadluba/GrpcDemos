@@ -17,10 +17,15 @@ namespace Metadata.Service.Services
         {
             _logger.LogInformation($"ExchangeData called");
 
+            // Process request metadata received from client
             foreach (var item in context.RequestHeaders)
             {
                 _logger.LogInformation($"ServerCallContext.RequestHeaders[] key={item.Key}, value={item.Value}");
             }
+
+            // Set response metadata to be sent to client
+            context.ResponseTrailers.Add(new Grpc.Core.Metadata.Entry("ServerResponseField1", "ServerResponseValue1"));
+            context.ResponseTrailers.Add(new Grpc.Core.Metadata.Entry("ServerResponseField2", "ServerResponseValue2"));
 
             return Task.FromResult(new ExchangeDataRequest());
         }
