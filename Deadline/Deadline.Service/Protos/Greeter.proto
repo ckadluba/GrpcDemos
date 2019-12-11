@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "Deadline.Service";
+
+service DelayedGreeter {
+    rpc GetDelayedGreeting(DelayedHelloRequest) returns (DelayedHelloReply);
+}
+
+message DelayedHelloRequest {
+    string name = 1;
+    int32 delay = 2;
+}
+
+message DelayedHelloReply {
+    string message = 1;
+}

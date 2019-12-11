@@ -33,9 +33,9 @@ Call server reflection via gRPCurl in call-service.ps1.
 
 Demonstrates sending call metadata in request and response between client and server.
 
-## Deadline (to do)
+## Deadline
 
-Demonstrates terminating a long lasting gRPC call using deadline.
+Demonstrates terminating a gRPC call using deadline.
 
 ## AsyncEcho
 
@@ -202,11 +202,12 @@ Client can query service interface.
 * In WCF controlled by Binding
   * OpenTimeout, CloseTimeout, SendTimeout, ReceiveTimeout
   * Enforced on client side
-* In gRPC every call has a timeout or deadline
-  * Some implementations specify fixed point in time (deadline) others a maximum delay (timeout)
+* In gRPC every call can have an individual deadline/timeout
+  * Some libraries use a fixed point in time (deadline) others a maximum delay (timeout)
   * Enforced by library
-  * Client error DEADLINE_EXCEEDED if service call exeeds deadline
-  * Server can check for status CANCELLED and stop .
+  * Handling in gRPC ASP.NET
+    * Client gets RpcException with StatusCode=DeadlineExceeded
+    * Server can use CancellactionToken in ServerCallContext object
 
 # Logging
 
