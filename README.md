@@ -1,6 +1,6 @@
 ﻿# gRPC Sample Programs
 
-Here are some small sample apps written in C# to explore the current state and features of the gRPC in stack for ASP.NET Core.
+Here are some small sample apps written in C# to explore the current state and features of the gRPC stack for ASP.NET Core.
 
 ## MinimalHello
 
