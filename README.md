@@ -8,8 +8,7 @@ The simplest possible client and server gRPC sample app consisting of only two p
 
 ## MinimalGoogleGrpc
 
-Like MinimalHello but client and server based on Google's Grpc.Core library.
-For demo purposes, it uses insecure transport over HTTP/2 without TLS and demonstrates also Google Grpc.Core client- and server side logging.
+Like MinimalHello but client and server based on Google's Grpc.Core library. For demo purposes, it uses insecure transport over HTTP/2 without TLS and demonstrates also Google Grpc.Core client- and server side logging.
 
 ## SimpleCalc
 
