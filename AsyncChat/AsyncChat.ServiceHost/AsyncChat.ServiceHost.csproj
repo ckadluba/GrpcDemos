@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AsyncEcho.ServiceLib\AsyncEcho.ServiceLib.csproj" />
+    <ProjectReference Include="..\AsyncChat.ServiceLib\AsyncChat.ServiceLib.csproj" />
   </ItemGroup>
 
 </Project>

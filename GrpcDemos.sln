@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AsyncEcho", "AsyncEcho", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncEcho.SharedLib", "AsyncEcho\AsyncEcho.SharedLib\AsyncEcho.SharedLib.csproj", "{B006F005-6B5B-4136-B733-199633D103C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncEchoServiceLib", "AsyncEcho\AsyncEcho.ServiceLib\AsyncEchoServiceLib.csproj", "{ACCBBB24-F44C-4A4F-8687-7013A120FC2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncEcho.ServiceLib", "AsyncEcho\AsyncEcho.ServiceLib\AsyncEcho.ServiceLib.csproj", "{ACCBBB24-F44C-4A4F-8687-7013A120FC2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncEcho.ServiceHost", "AsyncEcho\AsyncEcho.ServiceHost\AsyncEcho.ServiceHost.csproj", "{E5F83D44-5727-446D-9539-274C664B7437}"
 EndProject
@@ -69,9 +69,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Metadata.Client", "Metadata
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deadline", "Deadline", "{7E829D39-68B1-4299-9858-E031C0815218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deadline.Service", "Deadline\Deadline.Service\Deadline.Service.csproj", "{0EB8EE6F-F02B-4605-AF50-3367ADBA2C82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deadline.Service", "Deadline\Deadline.Service\Deadline.Service.csproj", "{0EB8EE6F-F02B-4605-AF50-3367ADBA2C82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deadline.Client", "Deadline\Deadline.Client\Deadline.Client.csproj", "{BAF19CC3-B2BD-45D9-BBEB-B84CEA81F463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deadline.Client", "Deadline\Deadline.Client\Deadline.Client.csproj", "{BAF19CC3-B2BD-45D9-BBEB-B84CEA81F463}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AsyncChat", "AsyncChat", "{008C1BA7-0BE7-47C1-91B0-364BB2D19A43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncChat.SharedLib", "AsyncChat\AsyncChat.SharedLib\AsyncChat.SharedLib.csproj", "{09DF8221-08BC-4414-AFDC-63A4F865C9EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncChat.ServiceLib", "AsyncChat\AsyncChat.ServiceLib\AsyncChat.ServiceLib.csproj", "{7516F3C8-E493-4628-BD6F-0E3675F22FB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncChat.ServiceHost", "AsyncChat\AsyncChat.ServiceHost\AsyncChat.ServiceHost.csproj", "{D7295028-F3B5-42A0-A90F-B824494D5194}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncChat.Client", "AsyncChat\AsyncChat.Client\AsyncChat.Client.csproj", "{D96FF152-881A-41E4-9B69-286FA04166D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +181,22 @@ Global
 		{BAF19CC3-B2BD-45D9-BBEB-B84CEA81F463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAF19CC3-B2BD-45D9-BBEB-B84CEA81F463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAF19CC3-B2BD-45D9-BBEB-B84CEA81F463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09DF8221-08BC-4414-AFDC-63A4F865C9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DF8221-08BC-4414-AFDC-63A4F865C9EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DF8221-08BC-4414-AFDC-63A4F865C9EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DF8221-08BC-4414-AFDC-63A4F865C9EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7516F3C8-E493-4628-BD6F-0E3675F22FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7516F3C8-E493-4628-BD6F-0E3675F22FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7516F3C8-E493-4628-BD6F-0E3675F22FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7516F3C8-E493-4628-BD6F-0E3675F22FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7295028-F3B5-42A0-A90F-B824494D5194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7295028-F3B5-42A0-A90F-B824494D5194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7295028-F3B5-42A0-A90F-B824494D5194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7295028-F3B5-42A0-A90F-B824494D5194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D96FF152-881A-41E4-9B69-286FA04166D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96FF152-881A-41E4-9B69-286FA04166D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96FF152-881A-41E4-9B69-286FA04166D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96FF152-881A-41E4-9B69-286FA04166D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -199,6 +225,10 @@ Global
 		{A046F503-F326-42AF-9F31-11A5833C4739} = {4B2EE752-E660-4905-8871-64619975C9F0}
 		{0EB8EE6F-F02B-4605-AF50-3367ADBA2C82} = {7E829D39-68B1-4299-9858-E031C0815218}
 		{BAF19CC3-B2BD-45D9-BBEB-B84CEA81F463} = {7E829D39-68B1-4299-9858-E031C0815218}
+		{09DF8221-08BC-4414-AFDC-63A4F865C9EB} = {008C1BA7-0BE7-47C1-91B0-364BB2D19A43}
+		{7516F3C8-E493-4628-BD6F-0E3675F22FB7} = {008C1BA7-0BE7-47C1-91B0-364BB2D19A43}
+		{D7295028-F3B5-42A0-A90F-B824494D5194} = {008C1BA7-0BE7-47C1-91B0-364BB2D19A43}
+		{D96FF152-881A-41E4-9B69-286FA04166D6} = {008C1BA7-0BE7-47C1-91B0-364BB2D19A43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EE90E9C-02DF-45AE-9790-EF4743EACC52}

@@ -42,9 +42,9 @@ A service that just echos the input from the client using an asynchronous gRPC c
 
 Execute AsyncEcho.ServiceHost and AsyncEcho.Client.
 
-## AsyncChat (to do)
+## AsyncChat
 
-A small chat server with a console client using asynchronous gRPC calls.
+A small chat server with a console client using only one asynchronous gRPC call with bidirectional streaming.
 
 Execute AsyncChat.ServiceHost and two or more instances of AsyncChat.Client.
 
