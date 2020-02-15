@@ -48,6 +48,10 @@ A small chat server with a console client using only one asynchronous gRPC call 
 
 Execute AsyncChat.ServiceHost and two or more instances of AsyncChat.Client.
 
+## GrpcWeb
+
+Uses gRPC-Web to perform gRPC communication over HTTP/1.
+
 # Writing the Code
 
 This example is based on the SimpleCalc sample app.
@@ -290,11 +294,15 @@ Client can query service interface.
 * Wireshark
   * Only suitable for general connectivity problems or with insecure HTTP/2 during development
   * TLS also possible but requires cumbersome server cert + private key setup in Wireshark
-  * Trace packets on loopback interface with display filter "tcp.port == 5001".
+  * Trace packets on loopback interface with display filter "tcp.port == 5001"
   * Configure HTTP/2 dissection if not port 80: Edit > Settings > Protocols > http2 > Port = 5001
-* gRPC-Web - swagger like browser support for gRPC services
+* gRPC-Web
+  * Compatibility extension for clients and server envs that cannot handle HTTP/2
   * https://grpc.io/docs/tutorials/basic/web/
-  * Requires additional code generation, introduces a proxy
+  * Can use HTTP/1 instead of HTTP/2 to transport gRPC communication
+  * Supported in ASP.NET Core (https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)
+  * Can be used to connect SPA browser apps that cannot send HTTP/2 requests yet (browser API restrictions).
+  * Has restrictions compared to HTTP/2 transport (no client or bidirectional streaming)
 * Traffic Parrot
   * https://trafficparrot.com/tutorials/mocking-and-simulating-grpc.html
   * Wire mocking gRPC services
