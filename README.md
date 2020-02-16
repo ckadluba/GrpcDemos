@@ -303,6 +303,8 @@ Client can query service interface.
   * Supported in ASP.NET Core (https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)
   * Can be used to connect SPA browser apps that cannot send HTTP/2 requests yet (browser API restrictions).
   * Has restrictions compared to HTTP/2 transport (no client or bidirectional streaming)
+  * Wireshark sample:
+    ![GrpcWeb](grpcweb.png)
 * Traffic Parrot
   * https://trafficparrot.com/tutorials/mocking-and-simulating-grpc.html
   * Wire mocking gRPC services
