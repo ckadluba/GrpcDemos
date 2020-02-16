@@ -50,7 +50,7 @@ Execute AsyncChat.ServiceHost and two or more instances of AsyncChat.Client.
 
 ## GrpcWeb
 
-Uses gRPC-Web to perform gRPC communication over HTTP/1.
+Uses gRPC-Web to perform gRPC communication over HTTP/1.1.
 
 # Writing the Code
 
@@ -299,7 +299,7 @@ Client can query service interface.
 * gRPC-Web
   * Compatibility extension for clients and server envs that cannot handle HTTP/2
   * https://grpc.io/docs/tutorials/basic/web/
-  * Can use HTTP/1 instead of HTTP/2 to transport gRPC communication
+  * Can use HTTP/1.1 instead of HTTP/2 to transport gRPC communication
   * Supported in ASP.NET Core (https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)
   * Can be used to connect SPA browser apps that cannot send HTTP/2 requests yet (browser API restrictions).
   * Has restrictions compared to HTTP/2 transport (no client or bidirectional streaming)
