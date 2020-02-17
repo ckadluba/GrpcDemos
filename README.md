@@ -297,8 +297,8 @@ Client can query service interface.
   * Trace packets on loopback interface with display filter "tcp.port == 5001"
   * Configure HTTP/2 dissection if not port 80: Edit > Settings > Protocols > http2 > Port = 5001
 * gRPC-Web
+  * https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md
   * Compatibility extension for clients and server envs that cannot handle HTTP/2
-  * https://grpc.io/docs/tutorials/basic/web/
   * Can use HTTP/1.1 instead of HTTP/2 to transport gRPC communication
   * Supported in ASP.NET Core (https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)
   * Can be used to connect SPA browser apps that cannot send HTTP/2 requests yet (browser API restrictions).
